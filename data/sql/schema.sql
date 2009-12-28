@@ -1,0 +1,11 @@
+CREATE TABLE bracket (id BIGINT AUTO_INCREMENT, user_id BIGINT, name VARCHAR(255), score BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE game (id BIGINT AUTO_INCREMENT, home_id BIGINT, away_id BIGINT, due DATETIME, home_score BIGINT, away_score BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX home_id_idx (home_id), INDEX away_id_idx (away_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE pick (id BIGINT AUTO_INCREMENT, bracket_id BIGINT, game_id BIGINT, team_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX bracket_id_idx (bracket_id), INDEX game_id_idx (game_id), INDEX team_id_idx (team_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE team (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE user (id BIGINT AUTO_INCREMENT, name VARCHAR(255), password VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE bracket ADD CONSTRAINT bracket_user_id_user_id FOREIGN KEY (user_id) REFERENCES user(id);
+ALTER TABLE game ADD CONSTRAINT game_home_id_team_id FOREIGN KEY (home_id) REFERENCES team(id);
+ALTER TABLE game ADD CONSTRAINT game_away_id_team_id FOREIGN KEY (away_id) REFERENCES team(id);
+ALTER TABLE pick ADD CONSTRAINT pick_team_id_team_id FOREIGN KEY (team_id) REFERENCES team(id);
+ALTER TABLE pick ADD CONSTRAINT pick_game_id_game_id FOREIGN KEY (game_id) REFERENCES game(id);
+ALTER TABLE pick ADD CONSTRAINT pick_bracket_id_bracket_id FOREIGN KEY (bracket_id) REFERENCES bracket(id);
