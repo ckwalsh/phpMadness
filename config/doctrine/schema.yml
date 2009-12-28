@@ -1,0 +1,50 @@
+detect_relations: true
+
+Game:
+  actAs: [Timestampable]
+  columns:
+    home_id:
+      type: integer
+    away_id:
+      type: integer
+    due:
+      type: timestamp
+    home_score:
+      type: integer
+    away_score:
+      type: integer
+  relations:
+    Home:
+      class: Team
+      local: home_id
+    Away:
+      class: Team
+      local: away_id
+Team:
+  columns:
+    name:
+      type: string(255)
+Pick:
+  actAs: [Timestampable]
+  columns:
+    bracket_id:
+      type: integer
+    game_id:
+      type: integer
+    team_id:
+      type: integer
+Bracket:
+  actAs: [Timestampable]
+  columns:
+    user_id:
+      type: integer
+    name:
+      type: string(255)
+    score:
+      type: integer
+User:
+  columns:
+    name:
+      type: string(255)
+    password:
+      type: string(255)
