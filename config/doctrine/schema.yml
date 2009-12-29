@@ -17,6 +17,8 @@ Game:
       type: integer
     away_score:
       type: integer
+    points:
+      type: integer
   relations:
     Home:
       class: Team

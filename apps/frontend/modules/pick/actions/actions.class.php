@@ -87,7 +87,7 @@ class pickActions extends sfActions
     {
       $pick = $form->save();
 
-      $this->redirect('pick/edit?id='.$pick->getId());
+      $this->redirect('bracket/show?id='.$pick->getBracketId());
     }
   }
 }

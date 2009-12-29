@@ -8,11 +8,7 @@
   <table>
     <tfoot>
       <tr>
-        <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('pick/index') ?>">Back to list</a>
-          <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'pick/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
-          <?php endif; ?>
+        <td colspan="2"><?php echo link_to('Back to bracket', 'bracket/show?id=' . $form->getObject()->getBracketId()) ?>
           <input type="submit" value="Save" />
         </td>
       </tr>
