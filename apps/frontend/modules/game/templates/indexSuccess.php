@@ -17,8 +17,8 @@
     <?php foreach ($games as $game): ?>
     <tr>
       <td><a href="<?php echo url_for('game/show?id='.$game->getId()) ?>"><?php echo $game->getId() ?></a></td>
-      <td><?php echo $game->getHomeId() ?></td>
-      <td><?php echo $game->getAwayId() ?></td>
+      <td><?php echo $game->getHome()->getName() ?></td>
+      <td><?php echo $game->getAway()->getName() ?></td>
       <td><?php echo $game->getDue() ?></td>
       <td><?php echo $game->getHomeScore() ?></td>
       <td><?php echo $game->getAwayScore() ?></td>

@@ -21,6 +21,30 @@ class bracketActions extends sfActions
   {
     $this->bracket = Doctrine::getTable('Bracket')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->bracket);
+    
+    $this->picks = array();
+    $picks = $this->bracket->getPick();
+    
+    foreach($picks as $p)
+    {
+      $this->picks[$p->getGameId()] = $p;
+    }
+
+    $this->games = array();
+    $games = Doctrine::getTable('Game')->findAll();
+    
+    foreach($games as $g)
+    {
+      $this->games[$g->getId()] = $g;
+    }
+
+    $this->teams = array();
+    $teams = Doctrine::getTable('Team')->findAll();
+    
+    foreach($teams as $t)
+    {
+      $this->teams[$t->getId()] = $t;
+    }
   }
 
   public function executeNew(sfWebRequest $request)

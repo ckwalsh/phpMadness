@@ -10,6 +10,7 @@
  */
 class pickActions extends sfActions
 {
+  /*
   public function executeIndex(sfWebRequest $request)
   {
     $this->picks = Doctrine::getTable('Pick')
@@ -38,10 +39,21 @@ class pickActions extends sfActions
 
     $this->setTemplate('new');
   }
-
+*/
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($pick = Doctrine::getTable('Pick')->find(array($request->getParameter('id'))), sprintf('Object pick does not exist (%s).', $request->getParameter('id')));
+    $pick = Doctrine::getTable('Pick')->find(array($request->getParameter('id')));
+    $bracket = (int) $request->getParameter('bracket');
+    $game = (int) $request->getParameter('game');
+    $this->forward404Unless($pick || ($bracket && $game));
+    if(!$pick) $pick = Doctrine::getTable('Pick')->findOneByBracketIdAndGameId($bracket, $game);
+    if(!$pick)
+    {
+      $pick = new Pick();
+      $pick->bracket_id = $request->getParameter('bracket');
+      $pick->game_id = $request->getParameter('game');
+      $pick->save();
+    }
     $this->form = new PickForm($pick);
   }
 
@@ -56,6 +68,7 @@ class pickActions extends sfActions
     $this->setTemplate('edit');
   }
 
+  /*
   public function executeDelete(sfWebRequest $request)
   {
     $request->checkCSRFProtection();
@@ -65,6 +78,7 @@ class pickActions extends sfActions
 
     $this->redirect('pick/index');
   }
+  */
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {

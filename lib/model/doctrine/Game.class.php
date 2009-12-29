@@ -12,4 +12,18 @@
  */
 class Game extends BaseGame
 {
+  
+  public function getPossibleTeamIds()
+  {
+    $teams = array();
+    
+    if($this->home_id) $teams = array((int) $this->home_id);
+    else $teams = Doctrine::getTable('Game')->find($this->home_game)->getPossibleTeamIds();
+    //print_r($teams);
+    if($this->away_id) $teams[] = (int) $this->away_id;
+    else $teams = array_merge($teams, Doctrine::getTable('Game')->find($this->away_game)->getPossibleTeamIds());
+    //print_r($teams);
+    
+    return $teams;
+  }
 }

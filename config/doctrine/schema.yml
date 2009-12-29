@@ -3,6 +3,10 @@ detect_relations: true
 Game:
   actAs: [Timestampable]
   columns:
+    home_game:
+      type: integer
+    away_game:
+      type: integer
     home_id:
       type: integer
     away_id:

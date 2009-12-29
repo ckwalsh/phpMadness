@@ -15,3 +15,419 @@
 #     password: changeme
 #     name:     Kris Wallsmith
 #     email:    kris.wallsmith@symfony-project.com
+User:
+  cullen:
+    name: Cullen
+    password: abc
+Bracket:
+  original_bracket:
+    user_id: 1
+    name: Mine
+Pick:
+  seed1:
+    bracket_id: 1
+    game_id: 1
+    team_id: 1
+Team:
+  mw1:
+    name: Midwest1
+  mw2:
+    name: Midwest2
+  mw3:
+    name: Midwest3
+  mw4:
+    name: Midwest4
+  mw5:
+    name: Midwest5
+  mw6:
+    name: Midwest6
+  mw7:
+    name: Midwest7
+  mw8:
+    name: Midwest8
+  mw9:
+    name: Midwest9
+  mw10:
+    name: Midwest10
+  mw11:
+    name: Midwest11
+  mw12:
+    name: Midwest12
+  mw13:
+    name: Midwest13
+  mw14:
+    name: Midwest14
+  mw15:
+    name: Midwest15
+  mw16:
+    name: Midwest16
+  
+  w1:
+    name: West1
+  w2:
+    name: West2
+  w3:
+    name: West3
+  w4:
+    name: West4
+  w5:
+    name: West5
+  w6:
+    name: West6
+  w7:
+    name: West7
+  w8:
+    name: West8
+  w9:
+    name: West9
+  w10:
+    name: West10
+  w11:
+    name: West11
+  w12:
+    name: West12
+  w13:
+    name: West13
+  w14:
+    name: West14
+  w15:
+    name: West15
+  w16:
+    name: West16
+
+  e1:
+    name: East1
+  e2:
+    name: East2
+  e3:
+    name: East3
+  e4:
+    name: East4
+  e5:
+    name: East5
+  e6:
+    name: East6
+  e7:
+    name: East7
+  e8:
+    name: East8
+  e9:
+    name: East9
+  e10:
+    name: East10
+  e11:
+    name: East11
+  e12:
+    name: East12
+  e13:
+    name: East13
+  e14:
+    name: East14
+  e15:
+    name: East15
+  e16:
+    name: East16
+
+  s1:
+    name: South1
+  s2:
+    name: South2
+  s3:
+    name: South3
+  s4:
+    name: South4
+  s5:
+    name: South5
+  s6:
+    name: South6
+  s7:
+    name: South7
+  s8:
+    name: South8
+  s9:
+    name: South9
+  s10:
+    name: South10
+  s11:
+    name: South11
+  s12:
+    name: South12
+  s13:
+    name: South13
+  s14:
+    name: South14
+  s15:
+    name: South15
+  s16:
+    name: South16
+
+Game:
+  mw1_1:
+    home_id: 1
+    away_id: 16
+    due: '2010-03-01 00:00:00'
+  mw1_2:
+    home_id: 8
+    away_id: 9
+    due: '2010-03-01 00:00:00'
+  mw1_3:
+    home_id: 2
+    away_id: 15
+    due: '2010-03-01 00:00:00'
+  mw1_4:
+    home_id: 7
+    away_id: 10
+    due: '2010-03-01 00:00:00'
+  mw1_5:
+    home_id: 3
+    away_id: 14
+    due: '2010-03-01 00:00:00'
+  mw1_6:
+    home_id: 6
+    away_id: 11
+    due: '2010-03-01 00:00:00'
+  mw1_7:
+    home_id: 4
+    away_id: 13
+    due: '2010-03-01 00:00:00'
+  mw1_8:
+    home_id: 5
+    away_id: 12
+    due: '2010-03-01 00:00:00'
+
+  mw2_1:
+    home_game: 1
+    away_game: 2
+    due: '2010-03-01 00:00:00'
+  mw2_2:
+    home_game: 3
+    away_game: 4
+    due: '2010-03-01 00:00:00'
+  mw2_3:
+    home_game: 5
+    away_game: 6
+    due: '2010-03-01 00:00:00'
+  mw2_4:
+    home_game: 7
+    away_game: 8
+    due: '2010-03-01 00:00:00'
+
+  mw3_1:
+    home_game: 9
+    away_game: 10
+    due: '2010-03-01 00:00:00'
+  mw3_2:
+    home_game: 11
+    away_game: 12
+    due: '2010-03-01 00:00:00'
+
+  mw4_1:
+    home_game: 13
+    away_game: 14
+    due: '2010-03-01 00:00:00'
+
+  w1_1:
+    home_id: 17
+    away_id: 32
+    due: '2010-03-01 00:00:00'
+  w1_2:
+    home_id: 24
+    away_id: 25
+    due: '2010-03-01 00:00:00'
+  w1_3:
+    home_id: 18
+    away_id: 31
+    due: '2010-03-01 00:00:00'
+  w1_4:
+    home_id: 23
+    away_id: 26
+    due: '2010-03-01 00:00:00'
+  w1_5:
+    home_id: 19
+    away_id: 30
+    due: '2010-03-01 00:00:00'
+  w1_6:
+    home_id: 22
+    away_id: 27
+    due: '2010-03-01 00:00:00'
+  w1_7:
+    home_id: 20
+    away_id: 29
+    due: '2010-03-01 00:00:00'
+  w1_8:
+    home_id: 21
+    away_id: 28
+    due: '2010-03-01 00:00:00'
+
+  w2_1:
+    home_game: 16
+    away_game: 17
+    due: '2010-03-01 00:00:00'
+  w2_2:
+    home_game: 18
+    away_game: 19
+    due: '2010-03-01 00:00:00'
+  w2_3:
+    home_game: 20
+    away_game: 21
+    due: '2010-03-01 00:00:00'
+  w2_4:
+    home_game: 22
+    away_game: 23
+    due: '2010-03-01 00:00:00'
+
+  w3_1:
+    home_game: 24
+    away_game: 25
+    due: '2010-03-01 00:00:00'
+  w3_2:
+    home_game: 26
+    away_game: 27
+    due: '2010-03-01 00:00:00'
+
+  w4_1:
+    home_game: 28
+    away_game: 29
+    due: '2010-03-01 00:00:00'
+
+  e1_1:
+    home_id: 33
+    away_id: 48
+    due: '2010-03-01 00:00:00'
+  e1_2:
+    home_id: 40
+    away_id: 41
+    due: '2010-03-01 00:00:00'
+  e1_3:
+    home_id: 34
+    away_id: 47
+    due: '2010-03-01 00:00:00'
+  e1_4:
+    home_id: 39
+    away_id: 42
+    due: '2010-03-01 00:00:00'
+  e1_5:
+    home_id: 35
+    away_id: 46
+    due: '2010-03-01 00:00:00'
+  e1_6:
+    home_id: 38
+    away_id: 43
+    due: '2010-03-01 00:00:00'
+  e1_7:
+    home_id: 36
+    away_id: 45
+    due: '2010-03-01 00:00:00'
+  e1_8:
+    home_id: 37
+    away_id: 44
+    due: '2010-03-01 00:00:00'
+
+  e2_1:
+    home_game: 31
+    away_game: 32
+    due: '2010-03-01 00:00:00'
+  e2_2:
+    home_game: 33
+    away_game: 34
+    due: '2010-03-01 00:00:00'
+  e2_3:
+    home_game: 35
+    away_game: 36
+    due: '2010-03-01 00:00:00'
+  e2_4:
+    home_game: 37
+    away_game: 38
+    due: '2010-03-01 00:00:00'
+
+  e3_1:
+    home_game: 39
+    away_game: 40
+    due: '2010-03-01 00:00:00'
+  e3_2:
+    home_game: 41
+    away_game: 42
+    due: '2010-03-01 00:00:00'
+
+  e4_1:
+    home_game: 43
+    away_game: 44
+    due: '2010-03-01 00:00:00'
+
+  s1_1:
+    home_id: 49
+    away_id: 64
+    due: '2010-03-01 00:00:00'
+  s1_2:
+    home_id: 56
+    away_id: 57
+    due: '2010-03-01 00:00:00'
+  s1_3:
+    home_id: 50
+    away_id: 63
+    due: '2010-03-01 00:00:00'
+  s1_4:
+    home_id: 55
+    away_id: 58
+    due: '2010-03-01 00:00:00'
+  s1_5:
+    home_id: 51
+    away_id: 62
+    due: '2010-03-01 00:00:00'
+  s1_6:
+    home_id: 54
+    away_id: 59
+    due: '2010-03-01 00:00:00'
+  s1_7:
+    home_id: 52
+    away_id: 61
+    due: '2010-03-01 00:00:00'
+  s1_8:
+    home_id: 53
+    away_id: 60
+    due: '2010-03-01 00:00:00'
+
+  s2_1:
+    home_game: 46
+    away_game: 47
+    due: '2010-03-01 00:00:00'
+  s2_2:
+    home_game: 48
+    away_game: 49
+    due: '2010-03-01 00:00:00'
+  s2_3:
+    home_game: 50
+    away_game: 51
+    due: '2010-03-01 00:00:00'
+  s2_4:
+    home_game: 52
+    away_game: 53
+    due: '2010-03-01 00:00:00'
+
+  s3_1:
+    home_game: 54
+    away_game: 55
+    due: '2010-03-01 00:00:00'
+  s3_2:
+    home_game: 56
+    away_game: 57
+    due: '2010-03-01 00:00:00'
+
+  s4_1:
+    home_game: 58
+    away_game: 59
+    due: '2010-03-01 00:00:00'
+
+  ff_1:
+    home_game: 15
+    away_game: 30
+    due: '2010-03-01 00:00:00'
+  ff_2:
+    home_game: 45
+    away_game: 60
+    due: '2010-03-01 00:00:00'
+
+  final:
+    home_game: 61
+    away_game: 62
+    due: '2010-03-01 00:00:00'

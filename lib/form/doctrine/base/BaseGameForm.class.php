@@ -16,6 +16,8 @@ abstract class BaseGameForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
+      'home_game'  => new sfWidgetFormInputText(),
+      'away_game'  => new sfWidgetFormInputText(),
       'home_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Home'), 'add_empty' => true)),
       'away_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Away'), 'add_empty' => true)),
       'due'        => new sfWidgetFormDateTime(),
@@ -27,6 +29,8 @@ abstract class BaseGameForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
+      'home_game'  => new sfValidatorInteger(array('required' => false)),
+      'away_game'  => new sfValidatorInteger(array('required' => false)),
       'home_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Home'), 'required' => false)),
       'away_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Away'), 'required' => false)),
       'due'        => new sfValidatorDateTime(array('required' => false)),
